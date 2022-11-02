@@ -41,14 +41,14 @@ INSERT INTO `answers` (`id`, `content`, `is_right`, `questions_id`) VALUES
 (29, 'fajny', '1', 8),
 (30, 'szczeka', '0', 8),
 (31, 'warczy', '0', 8),
-(32, 'cycu', '1', 9),
-(33, 'gruby', '1', 9),
+(32, 'godfist', '1', 9),
+(33, 'gruby', '0', 9),
 (34, 'chudy', '0', 9),
 (35, 'mati', '0', 9),
-(36, 'zajawkowiczem', '1', 10),
-(37, 'gangsterem', '1', 10),
-(38, 'kujonem', '0', 10),
-(39, 'gamerem', '0', 10);
+(36, '1', '0', 10),
+(37, '2', '0', 10),
+(38, '3', '0', 10),
+(39, '4', '1', 10);
 
 -- --------------------------------------------------------
 
@@ -66,16 +66,16 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `content`) VALUES
-(1, 'Ile lat ma paweł '),
-(2, 'Ile lat ma oskar'),
-(3, 'Ile lat ma kacper'),
-(4, 'kto gra w lola'),
+(1, 'W jakim wieku Jest Szymon '),
+(2, 'Ile lat ma Paweł'),
+(3, 'Ile lat ma Kacper'),
+(4, 'kto gra na duzo na kompie'),
 (5, 'kto ma prawko'),
 (6, 'ile to 2+2'),
-(7, 'ktore zwierze jest z kotowatych'),
+(7, 'Jakie zwierze To najlepsy przyjaciel czlowieka'),
 (8, 'ktore okreslenia pasuja do kota'),
-(9, 'jakie ksywki ma oskar'),
-(10, 'kim jest szymi');
+(9, 'jakie ksywki ma Paweł'),
+(10, 'Ile lat ucze sie w tej szkole');
 
 -- --------------------------------------------------------
 
