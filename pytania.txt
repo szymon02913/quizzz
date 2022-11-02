@@ -1,0 +1,77 @@
+zad 1 (1)
+Ile lat ma paweł 
+- 17
+-18
+-19
+18
+
+zad 2 (1)
+Ile lat ma oskar
+- 17
+-18
+-19
+18
+
+zad 3 (1)
+Ile lat ma kacper
+- 17
+-18
+-19
+18
+
+zad 4 (3)
+kto gra w lola
+-pawel
+-oskar
+-pawel 2
+-kacper
+-szymi
+pawel oskar pawel 2
+
+zad 5 (3)
+kto ma prawko
+-pawel
+-oskar
+-milosz
+-kapi
+-pawel 2
+pawel oskar milosz
+
+zad 6 (2)
+ile to 2+2
+-2
+-2-(-2)
+-6-2
+-3
+6-2 2-(-2
+
+zad 7 (2)
+ktore zwierze jest z kotowatych
+-pies
+-kot
+-tygrys 26
+-chomik 27
+kot tygrys
+
+zad 8 (2)
+ktore okreslenia pasuja do kota
+- gruby 28
+- fajny 29
+- szczeka 30
+- warczy 31
+gruby fajny
+
+zad 9 (2)
+jakie ksywki ma oskar
+-cycu 32
+-gruby 33
+-chudy34
+-mati35
+cycu gruby
+
+zad 10 (2)
+kim jest szymi
+-zajawkowiczem 36
+-gangsterem 37
+-kujonem 38
+-gamerem 39
