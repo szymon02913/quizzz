@@ -1,54 +1,54 @@
 CREATE TABLE `answers` (
   `id` int(11) NOT NULL,
   `content` varchar(45) DEFAULT NULL,
-  `questions_id` int(11) NOT NULL,
-  `is_right` tinyint(1) DEFAULT NULL
+  `is_right` varchar(45) DEFAULT NULL,
+  `questions_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `answers`
 --
 
-INSERT INTO `answers` (`id`, `content`, `questions_id`, `is_right`) VALUES
-(1, '4', 1, 1),
-(2, '5', 1, 0),
-(3, '6', 1, 0),
-(4, '6', 2, 1),
-(5, '7', 2, 0),
-(6, '8', 2, 0),
-(7, '8', 3, 1),
-(8, '9', 3, 0),
-(9, '10', 3, 0),
-(10, 'zielony', 4, 1),
-(11, 'czerwony', 4, 1),
-(12, 'biały', 4, 1),
-(13, 'różowy', 4, 0),
-(14, 'szary', 4, 0),
-(15, 'niebieski', 5, 1),
-(16, 'biały', 5, 1),
-(17, 'czerwony', 5, 1),
-(18, 'szary', 5, 0),
-(19, 'żółty', 5, 0),
-(20, 'kot', 6, 1),
-(21, 'kot', 6, 1),
-(22, 'mysz', 6, 0),
-(23, 'szczur', 6, 0),
-(24, 'pies', 7, 1),
-(25, 'pies', 7, 1),
-(26, 'ptak', 7, 0),
-(27, 'ryba', 7, 0),
-(28, 'samochód', 8, 1),
-(29, 'samochód', 8, 1),
-(30, 'dom', 8, 0),
-(31, 'szkoła', 8, 0),
-(32, 'samolot', 9, 1),
-(33, 'samolot', 9, 1),
-(34, 'papier', 9, 0),
-(35, 'kamień', 9, 0),
-(36, 'czajnik', 10, 1),
-(37, 'czajnik', 10, 1),
-(38, 'pralka', 10, 0),
-(39, 'widelec', 10, 0);
+INSERT INTO `answers` (`id`, `content`, `is_right`, `questions_id`) VALUES
+(1, '18', '1', 1),
+(2, '17', '0', 1),
+(3, '19', '0', 1),
+(4, '17', '0', 2),
+(5, '18', '0', 2),
+(6, '19', '1', 2),
+(7, '18', '1', 3),
+(8, '19', '0', 3),
+(9, '17', '0', 3),
+(10, 'pawel', '1', 4),
+(11, 'oskar', '1', 4),
+(12, 'pawel 2', '1', 4),
+(13, 'kacper', '0', 4),
+(14, 'szymi', '0', 4),
+(15, 'pawel', '1', 5),
+(16, 'oskar', '1', 5),
+(17, 'milosz', '1', 5),
+(18, 'kapi', '0', 5),
+(19, 'pawel 2', '0', 5),
+(20, '2', '0', 6),
+(21, '2-(-2)', '1', 6),
+(22, '6-2', '1', 6),
+(23, '3', '0', 6),
+(24, 'pies', '0', 7),
+(25, 'kot', '1', 7),
+(26, 'tygrys', '1', 7),
+(27, 'chomik', '0', 7),
+(28, 'gruby', '1', 8),
+(29, 'fajny', '1', 8),
+(30, 'szczeka', '0', 8),
+(31, 'warczy', '0', 8),
+(32, 'cycu', '1', 9),
+(33, 'gruby', '1', 9),
+(34, 'chudy', '0', 9),
+(35, 'mati', '0', 9),
+(36, 'zajawkowiczem', '1', 10),
+(37, 'gangsterem', '1', 10),
+(38, 'kujonem', '0', 10),
+(39, 'gamerem', '0', 10);
 
 -- --------------------------------------------------------
 
@@ -66,16 +66,16 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `content`) VALUES
-(1, 'ile to 2+2?'),
-(2, 'ile to 3+3?'),
-(3, 'ile to 4+4?'),
-(4, 'kolory flagi Włoch'),
-(5, 'kolory flagi Francji'),
-(6, 'znajdź kota'),
-(7, 'znajdź psa'),
-(8, 'znajdź samochód'),
-(9, 'znajdź samolot'),
-(10, 'znajdź czajnik');
+(1, 'Ile lat ma paweł '),
+(2, 'Ile lat ma oskar'),
+(3, 'Ile lat ma kacper'),
+(4, 'kto gra w lola'),
+(5, 'kto ma prawko'),
+(6, 'ile to 2+2'),
+(7, 'ktore zwierze jest z kotowatych'),
+(8, 'ktore okreslenia pasuja do kota'),
+(9, 'jakie ksywki ma oskar'),
+(10, 'kim jest szymi');
 
 -- --------------------------------------------------------
 
@@ -100,9 +100,9 @@ CREATE TABLE `students` (
 CREATE TABLE `students_checks` (
   `id` int(11) NOT NULL,
   `answers_id` int(11) NOT NULL,
-  `students_id` int(11) NOT NULL,
+  `questions_id` int(11) NOT NULL,
   `tests_id` int(11) NOT NULL,
-  `questions_id` int(11) NOT NULL
+  `students_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -112,6 +112,7 @@ CREATE TABLE `students_checks` (
 --
 
 CREATE TABLE `students_has_tests` (
+  `id` int(11) NOT NULL,
   `students_id` int(11) NOT NULL,
   `tests_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -124,7 +125,7 @@ CREATE TABLE `students_has_tests` (
 
 CREATE TABLE `tests` (
   `id` int(11) NOT NULL,
-  `data` varchar(45) DEFAULT NULL
+  `date` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -134,6 +135,7 @@ CREATE TABLE `tests` (
 --
 
 CREATE TABLE `tests_has_questions` (
+  `id` int(11) NOT NULL,
   `tests_id` int(11) NOT NULL,
   `questions_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -165,17 +167,18 @@ ALTER TABLE `students`
 -- Indeksy dla tabeli `students_checks`
 --
 ALTER TABLE `students_checks`
-  ADD PRIMARY KEY (`id`,`answers_id`,`students_id`,`tests_id`,`questions_id`),
+  ADD PRIMARY KEY (`id`,`answers_id`,`questions_id`,`tests_id`,`students_id`),
   ADD KEY `fk_students_checks_answers1` (`answers_id`),
-  ADD KEY `fk_students_checks_students1` (`students_id`),
+  ADD KEY `fk_students_checks_questions1` (`questions_id`),
   ADD KEY `fk_students_checks_tests1` (`tests_id`),
-  ADD KEY `fk_students_checks_questions1` (`questions_id`);
+  ADD KEY `fk_students_checks_students1` (`students_id`);
 
 --
 -- Indeksy dla tabeli `students_has_tests`
 --
 ALTER TABLE `students_has_tests`
-  ADD PRIMARY KEY (`students_id`,`tests_id`),
+  ADD PRIMARY KEY (`id`,`students_id`,`tests_id`),
+  ADD KEY `fk_students_has_tests_students1` (`students_id`),
   ADD KEY `fk_students_has_tests_tests1` (`tests_id`);
 
 --
@@ -188,42 +191,9 @@ ALTER TABLE `tests`
 -- Indeksy dla tabeli `tests_has_questions`
 --
 ALTER TABLE `tests_has_questions`
-  ADD PRIMARY KEY (`tests_id`,`questions_id`),
+  ADD PRIMARY KEY (`id`,`tests_id`,`questions_id`),
+  ADD KEY `fk_tests_has_questions_tests1` (`tests_id`),
   ADD KEY `fk_tests_has_questions_questions1` (`questions_id`);
-
---
--- AUTO_INCREMENT dla zrzuconych tabel
---
-
---
--- AUTO_INCREMENT dla tabeli `answers`
---
-ALTER TABLE `answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT dla tabeli `questions`
---
-ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT dla tabeli `students`
---
-ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `students_checks`
---
-ALTER TABLE `students_checks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `tests`
---
-ALTER TABLE `tests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Ograniczenia dla zrzutów tabel
@@ -258,3 +228,4 @@ ALTER TABLE `tests_has_questions`
   ADD CONSTRAINT `fk_tests_has_questions_questions1` FOREIGN KEY (`questions_id`) REFERENCES `questions` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_tests_has_questions_tests1` FOREIGN KEY (`tests_id`) REFERENCES `tests` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
+
