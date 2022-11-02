@@ -1,12 +1,12 @@
 zad 1 (1)
-Ile lat ma paweł 
+W jakim wieku Jest Szymon
 - 17
 -18
 -19
 18
 
 zad 2 (1)
-Ile lat ma oskar
+Ile lat ma Paweł
 - 17
 -18
 -19
@@ -20,7 +20,7 @@ Ile lat ma kacper
 18
 
 zad 4 (3)
-kto gra w lola
+kto gra na duzo na kompie
 -pawel
 -oskar
 -pawel 2
@@ -45,13 +45,13 @@ ile to 2+2
 -3
 6-2 2-(-2
 
-zad 7 (2)
-ktore zwierze jest z kotowatych
--pies
+zad 7 (1)
+Jakie zwierze To najlepsy przyjaciel czlowieka
+-pies  26
 -kot
--tygrys 26
--chomik 27
-kot tygrys
+-tygrys 
+-chomik 
+pies
 
 zad 8 (2)
 ktore okreslenia pasuja do kota
@@ -61,17 +61,20 @@ ktore okreslenia pasuja do kota
 - warczy 31
 gruby fajny
 
-zad 9 (2)
-jakie ksywki ma oskar
--cycu 32
+zad 9 (1)
+jakie ksywki ma Paweł
+-godfist 32
 -gruby 33
 -chudy34
 -mati35
-cycu gruby
+gosfist
 
-zad 10 (2)
-kim jest szymi
--zajawkowiczem 36
--gangsterem 37
--kujonem 38
--gamerem 39
+zad 10 (1)
+Ile lat ucze sie w tej szkole
+-1
+-2
+-3
+-4
+4
+
+
